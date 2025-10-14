@@ -122,3 +122,4 @@ Undo / backups
 - If using `data.json`, keep a versioned copy or use Git to revert accidental deletions.
 
 If you'd like, I can implement the JSON wiring now and add a `leaderboard/data.json` sample plus update the `index.html` to use it — then removal becomes a simple edit to one JSON file.
+Note: wager leaderboards are now located in `leaderboard/index.html`. Edit that file (search for the "Wager Leaderboards" section) or use `leaderboard/data.json` when using the automated approach.

@@ -106,13 +106,360 @@
 
     </div>
 
-    <!-- Wager leaderboards moved to a dedicated page -->
+    <!-- Wager Leaderboards Section -->
     <div class="mt-20">
-      <div class="max-w-3xl mx-auto text-center p-8 bg-secondary/40 backdrop-blur rounded-2xl border border-neon/10">
-        <h2 class="text-3xl font-bold gradient-text mb-2">Wager Leaderboards</h2>
-        <p class="text-gray-300 mb-4">Weekly and Monthly wager top-10 leaderboards have their own page for easier updates.</p>
-        <a href="wager.html" class="inline-block px-6 py-3 bg-professional text-white rounded-full font-semibold shadow-lg hover:scale-105 transition-transform">Open Wager Leaderboards</a>
-        <p class="text-sm text-gray-400 mt-3">Or edit <code>leaderboard/wager.html</code> or <code>leaderboard/data.json</code> per the update guide.</p>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-black mb-6 gradient-text">Wager Leaderboards</h2>
+        <p class="text-xl text-gray-300">Compete for additional prizes based on your wagering activity</p>
+      </div>
+
+      <div class="mt-8">
+        <!-- Leaderboard Tabs -->
+        <div class="flex justify-center mb-12">
+          <div class="bg-primary/50 rounded-full p-1 backdrop-blur-sm border border-neon/20">
+            <button onclick="showLeaderboard('weekly')" id="weeklyTab" class="tab-btn active px-8 py-3 rounded-full text-sm font-bold transition-all">Weekly Wager</button>
+            <button onclick="showLeaderboard('monthly')" id="monthlyTab" class="tab-btn px-8 py-3 rounded-full text-sm font-bold transition-all">Monthly Wager</button>
+          </div>
+        </div>
+
+        <!-- Weekly Wager Leaderboard -->
+        <div id="weeklyLeaderboard" class="leaderboard-content">
+          <div class="bg-secondary/50 backdrop-blur-md rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl mb-8">
+            <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-6 border-b border-purple-500/30">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-white">Weekly Wager Competition</h3>
+                <div class="bg-white/20 rounded-lg px-4 py-2"><span class="text-sm font-bold text-white">Prize Pool: $5,000</span></div>
+              </div>
+              <p class="text-purple-200 mt-2">Resets every Monday at 00:00 UTC</p>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-primary/50">
+                    <th class="px-6 py-4 text-left text-sm font-bold text-purple-400 uppercase tracking-wider">Rank</th>
+                    <th class="px-6 py-4 text-left text-sm font-bold text-purple-400 uppercase tracking-wider">User</th>
+                    <th class="px-6 py-4 text-center text-sm font-bold text-purple-400 uppercase tracking-wider">Total Wager</th>
+                    <th class="px-6 py-4 text-right text-sm font-bold text-purple-400 uppercase tracking-wider">Prize</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-700/50">
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-sm font-bold text-primary">1</div>
+                        <span class="text-2xl">🏆</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-gold to-yellow-500 rounded-full flex items-center justify-center text-primary font-bold">W</div>
+                        <span class="text-white font-medium">WagerKing88</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$125,450</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-gold">$2,000.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-silver rounded-full flex items-center justify-center text-sm font-bold text-primary">2</div>
+                        <span class="text-2xl">🥈</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-silver to-gray-400 rounded-full flex items-center justify-center text-primary font-bold">H</div>
+                        <span class="text-white font-medium">HighRoller23</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$98,720</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-silver">$1,200.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-bronze rounded-full flex items-center justify-center text-sm font-bold text-white">3</div>
+                        <span class="text-2xl">🥉</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-bronze to-orange-600 rounded-full flex items-center justify-center text-white font-bold">G</div>
+                        <span class="text-white font-medium">GambleGuru</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$87,340</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-bronze">$800.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">4</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold">S</div>
+                        <span class="text-white font-medium">SpinMaster</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$65,890</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$500.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">5</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-green-700 rounded-full flex items-center justify-center text-white font-bold">L</div>
+                        <span class="text-white font-medium">LuckyPlayer</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$54,230</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$300.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">6</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-500 to-indigo-700 rounded-full flex items-center justify-center text-white font-bold">I</div>
+                        <span class="text-white font-medium">IceBet</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$40,110</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$200.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">7</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-rose-500 to-rose-700 rounded-full flex items-center justify-center text-white font-bold">R</div>
+                        <span class="text-white font-medium">RedStreak</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$33,950</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$150.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">8</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-full flex items-center justify-center text-white font-bold">E</div>
+                        <span class="text-white font-medium">EmeraldEdge</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$27,400</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$100.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">9</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold">N</div>
+                        <span class="text-white font-medium">NovaSpin</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$18,760</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$75.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">10</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-stone-500 to-stone-700 rounded-full flex items-center justify-center text-white font-bold">O</div>
+                        <span class="text-white font-medium">OrbitGambit</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-purple-400">$12,345</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$50.00</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monthly Wager Leaderboard -->
+        <div id="monthlyLeaderboard" class="leaderboard-content hidden">
+          <div class="bg-secondary/50 backdrop-blur-md rounded-2xl overflow-hidden border border-orange-500/30 shadow-2xl mb-8">
+            <div class="bg-gradient-to-r from-orange-600 to-red-600 p-6 border-b border-orange-500/30">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-white">Monthly Wager Competition</h3>
+                <div class="bg-white/20 rounded-lg px-4 py-2"><span class="text-sm font-bold text-white">Prize Pool: $25,000</span></div>
+              </div>
+              <p class="text-orange-200 mt-2">Resets on the 1st of each month at 00:00 UTC</p>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-primary/50">
+                    <th class="px-6 py-4 text-left text-sm font-bold text-orange-400 uppercase tracking-wider">Rank</th>
+                    <th class="px-6 py-4 text-left text-sm font-bold text-orange-400 uppercase tracking-wider">User</th>
+                    <th class="px-6 py-4 text-center text-sm font-bold text-orange-400 uppercase tracking-wider">Total Wager</th>
+                    <th class="px-6 py-4 text-right text-sm font-bold text-orange-400 uppercase tracking-wider">Prize</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-700/50">
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-sm font-bold text-primary">1</div>
+                        <span class="text-2xl">👑</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-gold to-yellow-500 rounded-full flex items-center justify-center text-primary font-bold">M</div>
+                        <span class="text-white font-medium">MegaWhale99</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$1,250,000</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-gold">$10,000.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-silver rounded-full flex items-center justify-center text-sm font-bold text-primary">2</div>
+                        <span class="text-2xl">💎</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-silver to-gray-400 rounded-full flex items-center justify-center text-primary font-bold">D</div>
+                        <span class="text-white font-medium">DiamondHands</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$987,500</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-silver">$6,000.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-bronze rounded-full flex items-center justify-center text-sm font-bold text-white">3</div>
+                        <span class="text-2xl">🔥</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-bronze to-orange-600 rounded-full flex items-center justify-center text-white font-bold">B</div>
+                        <span class="text-white font-medium">BigSpender</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$745,320</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-bronze">$4,000.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">4</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white font-bold">V</div>
+                        <span class="text-white font-medium">VIPGambler</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$523,890</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$2,500.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">5</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold">C</div>
+                        <span class="text-white font-medium">CryptoKing</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$456,780</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$1,500.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">6</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-lime-500 to-lime-700 rounded-full flex items-center justify-center text-white font-bold">L</div>
+                        <span class="text-white font-medium">LambdaLord</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$402,110</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$1,000.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">7</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-fuchsia-500 to-fuchsia-700 rounded-full flex items-center justify-center text-white font-bold">F</div>
+                        <span class="text-white font-medium">FrostByte</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$321,250</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$750.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">8</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-amber-500 to-amber-700 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <span class="text-white font-medium">ApexGamble</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$289,900</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$500.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">9</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-sky-500 to-sky-700 rounded-full flex items-center justify-center text-white font-bold">S</div>
+                        <span class="text-white font-medium">SkyBet</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$210,450</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$300.00</span></td>
+                  </tr>
+                  <tr class="hover:bg-primary/30 transition-colors">
+                    <td class="px-6 py-4 text-lg font-bold text-gray-400">10</td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-rose-400 to-rose-600 rounded-full flex items-center justify-center text-white font-bold">Q</div>
+                        <span class="text-white font-medium">QuartzQueen</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center"><span class="text-lg font-bold text-orange-400">$150,000</span></td>
+                    <td class="px-6 py-4 text-right"><span class="text-xl font-bold text-green-400">$200.00</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wager Rules -->
+        <div class="bg-gradient-to-r from-primary/80 via-secondary/80 to-accent/80 backdrop-blur-md rounded-2xl p-8 border border-neon/20 shadow-2xl">
+          <h3 class="text-2xl font-bold text-center gradient-text mb-6">Wager Competition Rules</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-neon mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <p class="text-gray-300">All wagers on Stake.com count towards leaderboards</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-neon mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <p class="text-gray-300">Must use referral code "OneXTiming" to qualify</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-neon mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <p class="text-gray-300">Prizes distributed within 24 hours of period end</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-neon mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <p class="text-gray-300">Minimum $10 total wager required to qualify</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-neon mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <p class="text-gray-300">Leaderboards update in real-time</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-neon mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <p class="text-gray-300">Contact Discord for support or questions</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
