@@ -11,14 +11,20 @@
       theme: {
         extend: {
           colors: {
-            primary: '#1a1a2e',
-            secondary: '#16213e',
-            accent: '#0f3460',
-            gold: '#ffd700',
-            silver: '#c0c0c0',
-            bronze: '#cd7f32',
-            neon: '#00ff88',
-            'dark-blue': '#0a0e27',
+            primary: '#0f172a',
+            secondary: '#1e293b',
+            accent: '#334155',
+            'accent-light': '#475569',
+            professional: '#2563eb',
+            'professional-dark': '#1d4ed8',
+            'professional-light': '#3b82f6',
+            gold: '#f59e0b',
+            silver: '#9ca3af',
+            bronze: '#d97706',
+            success: '#10b981',
+            'text-primary': '#f8fafc',
+            'text-secondary': '#cbd5e1',
+            'text-muted': '#94a3b8',
           },
           fontFamily: {
             'inter': ['Inter', 'sans-serif'],
@@ -36,8 +42,8 @@
   </script>
   <style>
     @keyframes glow {
-      from { box-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88, 0 0 40px #00ff88; }
-      to { box-shadow: 0 0 30px #00ff88, 0 0 40px #00ff88, 0 0 50px #00ff88; }
+      from { box-shadow: 0 0 20px #2563eb, 0 0 30px #2563eb, 0 0 40px #2563eb; }
+      to { box-shadow: 0 0 30px #2563eb, 0 0 40px #2563eb, 0 0 50px #2563eb; }
     }
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
@@ -52,7 +58,7 @@
       50% { transform: translateY(-5px); }
     }
     .gradient-text {
-      background: linear-gradient(135deg, #ffd700, #ffed4e, #ffd700);
+      background: linear-gradient(135deg, #2563eb, #3b82f6, #1d4ed8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -67,26 +73,26 @@
 </head>
 <body class="bg-gradient-to-br from-primary via-secondary to-accent min-h-screen text-white font-inter overflow-x-hidden">
   <!-- Navigation -->
-  <nav class="bg-gradient-to-r from-secondary/90 to-accent/90 backdrop-blur-md border-b border-neon/20 sticky top-0 z-50">
+  <nav class="bg-gradient-to-r from-secondary/95 to-accent/95 backdrop-blur-md border-b border-professional/20 sticky top-0 z-50 shadow-lg">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 bg-gradient-to-r from-neon to-gold rounded-lg flex items-center justify-center text-xl font-bold text-primary">
+          <div class="w-10 h-10 bg-gradient-to-r from-professional to-professional-light rounded-lg flex items-center justify-center text-xl font-bold text-white shadow-md">
             ⓠ
           </div>
           <span class="text-2xl font-bold gradient-text">OneX</span>
         </div>
         
-        <div class="hidden md:flex items-center space-x-1 bg-primary/50 rounded-full p-1 backdrop-blur-sm">
-          <a href="../home/index.html" class="px-6 py-2 rounded-full text-sm font-medium bg-neon text-primary hover:bg-neon/80 transition-all">
+        <div class="hidden md:flex items-center space-x-1 bg-primary/60 rounded-full p-1 backdrop-blur-sm shadow-inner">
+          <a href="index.html" class="px-6 py-2 rounded-full text-sm font-medium bg-professional text-white hover:bg-professional-dark transition-all shadow-sm">
             Home
           </a>
-          <a href="../leaderboard/index.html" class="px-6 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-accent/50 transition-all">
+          <a href="leaderboard/index.html" class="px-6 py-2 rounded-full text-sm font-medium text-text-secondary hover:text-white hover:bg-accent/50 transition-all">
             Leaderboard
           </a>
         </div>
 
-        <button class="md:hidden text-white hover:text-neon transition-colors">
+        <button class="md:hidden text-white hover:text-professional-light transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -110,8 +116,8 @@
         Claim exclusive bonuses, compete in leaderboards, participate in Giveaways and much more.
       </p>
       
-      <button onclick="location.href='../leaderboard/index.html'" 
-              class="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-neon via-green-500 to-neon hover:from-green-400 hover:via-neon hover:to-green-400 px-8 py-4 rounded-full text-primary font-bold text-xl transition-all transform hover:scale-105 shadow-2xl animate-bounce-subtle mb-16">
+      <button onclick="location.href='leaderboard/index.html'" 
+              class="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-professional via-professional-light to-professional hover:from-professional-dark hover:via-professional hover:to-professional-light px-8 py-4 rounded-full text-white font-bold text-xl transition-all transform hover:scale-105 shadow-2xl animate-bounce-subtle mb-16">
         <span class="text-2xl">🏆</span>
         <span>Explore Leaderboard</span>
         <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,8 +126,8 @@
       </button>
       
       <div class="text-center mb-12">
-        <p class="text-2xl md:text-3xl font-bold text-gray-200 mb-2">
-          Start your <span class="text-neon font-black">Stake</span> experience
+        <p class="text-2xl md:text-3xl font-bold text-text-primary mb-2">
+          Start your <span class="text-professional font-black">Stake</span> experience
         </p>
         <p class="text-xl md:text-2xl text-gold font-bold">
           Choose your <span class="gradient-text">FREE Bonus</span>
@@ -129,16 +135,16 @@
       </div>
       
       <div class="animate-bounce-subtle">
-        <svg class="w-8 h-8 mx-auto text-neon" fill="currentColor" viewBox="0 0 24 24">
+        <svg class="w-8 h-8 mx-auto text-professional" fill="currentColor" viewBox="0 0 24 24">
           <path d="M7 14l5 5 5-5z"/>
         </svg>
       </div>
     </div>
 
     <!-- Floating Elements -->
-    <div class="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-neon/20 to-gold/20 rounded-full blur-xl animate-float"></div>
-    <div class="absolute bottom-40 right-16 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl animate-float" style="animation-delay: -2s;"></div>
-    <div class="absolute top-1/2 left-4 w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-lg animate-float" style="animation-delay: -4s;"></div>
+    <div class="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-professional/20 to-gold/20 rounded-full blur-xl animate-float"></div>
+    <div class="absolute bottom-40 right-16 w-32 h-32 bg-gradient-to-br from-accent/20 to-accent-light/20 rounded-full blur-2xl animate-float" style="animation-delay: -2s;"></div>
+    <div class="absolute top-1/2 left-4 w-16 h-16 bg-gradient-to-br from-professional-light/20 to-professional/20 rounded-full blur-lg animate-float" style="animation-delay: -4s;"></div>
   </section>
 
   <!-- Bonus Cards Section -->
@@ -150,45 +156,45 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Free Bonus Card -->
-      <div class="group relative bg-gradient-to-br from-green-600/20 via-neon/10 to-emerald-700/20 backdrop-blur-md border border-neon/30 rounded-2xl p-8 card-hover shadow-2xl overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-neon/5 via-transparent to-green-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      <div class="group relative bg-gradient-to-br from-success/20 via-success/10 to-emerald-600/20 backdrop-blur-md border border-success/30 rounded-2xl p-8 card-hover shadow-2xl overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-success/5 via-transparent to-emerald-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
         <div class="relative z-10">
           <div class="text-center mb-6">
-            <div class="text-5xl font-black text-neon mb-2">$21</div>
-            <div class="inline-block bg-gradient-to-r from-neon to-green-400 text-primary px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">
+            <div class="text-5xl font-black text-success mb-2">$35</div>
+            <div class="inline-block bg-gradient-to-r from-success to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">
               Free Bonus
             </div>
           </div>
           
           <div class="space-y-4 mb-8">
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-neon mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Sign up under code <span class="text-neon font-bold">"OneXTiming"</span></span>
+              <span class="text-text-secondary">Sign up under code <span class="text-success font-bold">"OneXTiming"</span></span>
             </div>
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-neon mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">New users only</span>
+              <span class="text-text-secondary">New users only</span>
             </div>
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-neon mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Contact us on Discord</span>
+              <span class="text-text-secondary">Contact us on Discord</span>
             </div>
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-neon mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Receive $21 for Free</span>
+              <span class="text-text-secondary">Receive $35 for Free</span>
             </div>
           </div>
           
           <a href="https://stake.bet/?c=ONEX100&offer=onex100" 
-             class="block w-full text-center bg-gradient-to-r from-neon to-green-500 hover:from-green-400 hover:to-neon text-primary font-bold py-4 rounded-xl transition-all transform group-hover:scale-105 shadow-lg">
+             class="block w-full text-center bg-gradient-to-r from-success to-emerald-500 hover:from-emerald-400 hover:to-success text-white font-bold py-4 rounded-xl transition-all transform group-hover:scale-105 shadow-lg">
             Claim Bonus
           </a>
         </div>
@@ -213,24 +219,24 @@
               <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Sign up under code <span class="text-gold font-bold">"OneXTiming"</span></span>
+              <span class="text-text-secondary">Sign up under code <span class="text-gold font-bold">"OneXTiming"</span></span>
             </div>
             <div class="flex items-start space-x-3">
               <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Wager on Stake.com</span>
+              <span class="text-text-secondary">Wager on Stake.com</span>
             </div>
             <div class="flex items-start space-x-3">
               <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Check the leaderboard rankings!</span>
+              <span class="text-text-secondary">Check the leaderboard rankings!</span>
             </div>
           </div>
           
-          <button onclick="location.href='../leaderboard/index.html'" 
-                  class="w-full bg-gradient-to-r from-gold to-yellow-500 hover:from-yellow-400 hover:to-gold text-primary font-bold py-4 rounded-xl transition-all transform group-hover:scale-105 shadow-lg">
+          <button onclick="location.href='leaderboard/index.html'" 
+                  class="w-full bg-gradient-to-r from-gold to-yellow-500 hover:from-yellow-400 hover:to-gold text-white font-bold py-4 rounded-xl transition-all transform group-hover:scale-105 shadow-lg">
             View Leaderboard
           </button>
         </div>
@@ -249,33 +255,33 @@
           
           <div class="space-y-4 mb-8">
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-accent-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Sign up under code <span class="text-purple-400 font-bold">"OneXTiming"</span></span>
+              <span class="text-text-secondary">Sign up under code <span class="text-accent-light font-bold">"OneXTiming"</span></span>
             </div>
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-accent-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Deposit $100-$500</span>
+              <span class="text-text-secondary">Deposit $100-$500</span>
             </div>
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-accent-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">No Max. Bet Wager 40x</span>
+              <span class="text-text-secondary">No Max. Bet Wager 40x</span>
             </div>
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-accent-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-300">Contact us on Discord</span>
+              <span class="text-text-secondary">Contact us on Discord</span>
             </div>
           </div>
           
           <a href="https://stake.bet/?c=ONEX100&offer=onex100" 
-             class="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-400 hover:to-purple-400 text-white font-bold py-4 rounded-xl transition-all transform group-hover:scale-105 shadow-lg">
+             class="block w-full text-center bg-gradient-to-r from-accent to-accent-light hover:from-accent-light hover:to-accent text-white font-bold py-4 rounded-xl transition-all transform group-hover:scale-105 shadow-lg">
             Claim Bonus
           </a>
         </div>
@@ -290,7 +296,7 @@
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold mb-6 gradient-text">Contact & Support</h2>
         <p class="text-xl text-gray-300 mb-8">Join our community for help, updates, and exclusive content!</p>
-        <a href="https://discord.gg/onex100" 
+        <a href="https://discord.gg/onex100"
            class="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 px-8 py-4 rounded-full text-white font-bold text-lg transition-all transform hover:scale-105 shadow-xl">
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026 13.83 13.83 0 0 0 1.226-1.963.074.074 0 0 0-.041-.104 13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.210 0 2.176 1.077 2.157 2.38 0 1.311-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.210 0 2.176 1.077 2.157 2.38 0 1.311-.946 2.38-2.157 2.38z"/>
@@ -303,29 +309,29 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div class="text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start space-x-3 mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-neon to-gold rounded-lg flex items-center justify-center text-2xl font-bold text-primary">
+            <div class="w-12 h-12 bg-gradient-to-r from-professional to-gold rounded-lg flex items-center justify-center text-2xl font-bold text-white shadow-md">
               ⓠ
             </div>
             <span class="text-3xl font-bold gradient-text">OneX</span>
           </div>
-          <p class="text-gray-400">The ultimate gaming rewards platform</p>
+          <p class="text-text-muted">The ultimate professional gaming platform</p>
         </div>
         
         <div class="text-center">
-          <h3 class="text-lg font-bold text-neon mb-4">Quick Links</h3>
+          <h3 class="text-lg font-bold text-professional mb-4">Quick Links</h3>
           <div class="space-y-2">
-            <a href="../home/index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
-            <a href="../leaderboard/index.html" class="block text-gray-400 hover:text-white transition-colors">Leaderboard</a>
+            <a href="index.html" class="block text-text-muted hover:text-white transition-colors">Home</a>
+            <a href="leaderboard/index.html" class="block text-text-muted hover:text-white transition-colors">Leaderboard</a>
           </div>
         </div>
         
         <div class="text-center md:text-right">
-          <h3 class="text-lg font-bold text-neon mb-4">Connect</h3>
+          <h3 class="text-lg font-bold text-professional mb-4">Connect</h3>
           <div class="flex justify-center md:justify-end space-x-4">
-            <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-gray-400 hover:text-neon hover:bg-accent transition-all">
+            <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-text-muted hover:text-professional hover:bg-accent transition-all shadow-sm">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
             </a>
-            <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-gray-400 hover:text-neon hover:bg-accent transition-all">
+            <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-text-muted hover:text-professional hover:bg-accent transition-all shadow-sm">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
             </a>
           </div>
@@ -344,8 +350,8 @@
           </div>
         </div>
         
-        <div class="text-center text-gray-400">
-          <p>&copy; Copyright 2025 <strong class="text-neon">ONEX.GG</strong> - All rights reserved</p>
+        <div class="text-center text-text-muted">
+          <p>&copy; Copyright 2025 <strong class="text-professional">ONEX.GG</strong> - All rights reserved</p>
         </div>
       </div>
     </div>
