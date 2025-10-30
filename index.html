@@ -13,7 +13,7 @@
             font-family: 'Poppins', sans-serif;
         }
         body {
-            background-color: #1C2526;
+            background-color: #071524;
             color: #FFFFFF;
             text-align: center;
             overflow-x: hidden;
@@ -21,12 +21,12 @@
         }
         .header {
             padding: 40px 20px;
-            background: linear-gradient(180deg, #2A3439, #1C2526);
+            background: linear-gradient(180deg, #102A43, #071524);
         }
         .premium-box {
-            background: linear-gradient(135deg, #2A3439, #1C2526);
-            border: 2px solid #FFD700;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            background: linear-gradient(135deg, #102A43, #071524);
+            border: 2px solid #00D1B2;
+            box-shadow: 0 4px 15px rgba(0, 209, 178, 0.3);
             padding: 20px 30px;
             border-radius: 15px;
             font-size: 2.5rem;
@@ -34,7 +34,7 @@
             color: #FFFFFF;
             text-transform: uppercase;
             animation: zoomIn 1.5s ease-in-out;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            text-shadow: 0 0 10px rgba(0, 209, 178, 0.5);
             max-width: 90%;
             margin: 0 auto;
         }
@@ -52,14 +52,14 @@
         .header p {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #D3D3D3;
+            color: #A8B3C5;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
         .arrow {
             font-size: 2rem;
-            color: #FF4C4C;
+            color: #00D1B2;
             animation: bounce 2s infinite;
             cursor: pointer;
         }
@@ -77,7 +77,7 @@
             margin: 0 auto;
         }
         .card {
-            background: #2A3439;
+            background: #102A43;
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -89,23 +89,23 @@
         }
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 76, 76, 0.5);
+            box-shadow: 0 0 20px rgba(0, 209, 178, 0.5);
         }
         .card h3 {
             font-size: 1.8rem;
             margin-bottom: 15px;
-            color: #FF4C4C;
+            color: #00D1B2;
         }
         .card p {
             font-size: 1rem;
-            color: #D3D3D3;
+            color: #A8B3C5;
             margin-bottom: 10px;
             text-align: left;
             padding-left: 15px;
         }
         .card a {
             display: inline-block;
-            background: #FF4C4C;
+            background: #007BFF;
             color: #FFFFFF;
             padding: 12px 25px;
             border-radius: 5px;
@@ -116,11 +116,11 @@
             transition: background 0.3s ease;
         }
         .card a:hover {
-            background: #E63939;
+            background: #0056B3;
         }
-        .popular::after {
+        .popular:after {
             content: 'POPULAR';
-            background: #FF4C4C;
+            background: #007BFF;
             color: #FFFFFF;
             padding: 5px 10px;
             border-radius: 5px;
@@ -131,14 +131,14 @@
         }
         .discord {
             padding: 20px;
-            background: #2A3439;
+            background: #102A43;
             margin: 20px auto;
             max-width: 1200px;
             border-radius: 10px;
         }
         .discord p {
             font-size: 1.1rem;
-            color: #D3D3D3;
+            color: #A8B3C5;
         }
         .discord a {
             color: #7289DA;
@@ -150,11 +150,11 @@
         }
         .footer {
             padding: 20px;
-            background: #1C2526;
-            border-top: 1px solid #2A3439;
+            background: #071524;
+            border-top: 1px solid #102A43;
         }
         .footer a {
-            color: #FF4C4C;
+            color: #00D1B2;
             margin: 0 15px;
             text-decoration: none;
         }
@@ -165,7 +165,7 @@
             padding: 20px;
             font-size: 1rem;
             color: #FFFFFF;
-            background-color: #1C2526;
+            background-color: #071524;
         }
         .modal {
             display: none;
@@ -178,7 +178,7 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
         .modal-content {
-            background-color: #2A3439;
+            background-color: #102A43;
             margin: 5% auto;
             padding: 20px;
             border-radius: 10px;
@@ -196,16 +196,16 @@
             cursor: pointer;
         }
         .close:hover {
-            color: #FF4C4C;
+            color: #00D1B2;
         }
         .timer {
             font-size: 1.2rem;
-            color: #FF4C4C;
+            color: #00D1B2;
             margin: 15px 0;
         }
         .leaderboard-warning {
             font-size: 1rem;
-            color: #D3D3D3;
+            color: #A8B3C5;
             margin-bottom: 15px;
             font-style: italic;
         }
@@ -217,14 +217,88 @@
         th, td {
             padding: 10px;
             text-align: left;
-            border-bottom: 1px solid #FF4C4C;
+            border-bottom: 1px solid #00D1B2;
         }
         th {
-            background-color: #FF4C4C;
+            background-color: #007BFF;
             color: #FFFFFF;
         }
         tr:hover {
-            background-color: #1C2526;
+            background-color: #071524;
+        }
+        td:nth-child(4) {
+            color: #00D1B2;
+        }
+        #options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        #options button {
+            background: #007BFF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        #options button:hover {
+            background: #0056B3;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+        #options button.active {
+            background: #0056B3;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+        #adminModal .modal-content {
+            width: 95%;
+            max-width: 1000px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            background: #071524;
+            color: #FFFFFF;
+            border: 1px solid #00D1B2;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: #071524;
+            color: #FFFFFF;
+            border: 1px solid #00D1B2;
+            border-radius: 5px;
+        }
+        #saveData {
+            background: #007BFF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        #saveData:hover {
+            background: #0056B3;
+        }
+        #changePassword {
+            background: #FF4C4C;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+        #changePassword:hover {
+            background: #E63939;
         }
         @media (max-width: 768px) {
             .premium-box {
@@ -263,6 +337,12 @@
             .warning {
                 font-size: 0.9rem;
             }
+            #options {
+                flex-direction: column;
+            }
+            #options button {
+                margin: 5px 0;
+            }
         }
         @media (max-width: 480px) {
             .premium-box {
@@ -293,64 +373,66 @@
     <div class="header">
         <div class="premium-box">WELCOME TO ONEX100 COMMUNITY</div>
         <h1>THE BEST EXCLUSIVE REWARDS & BONUSES</h1>
-        <p>Exclusive Offers. Choose from our premium bonus packages designed to maximize your gaming experience.</p>
+        <p>Exclusive Offers: Choose from our premium bonus packages designed to maximize your gaming experience.</p>
         <div class="arrow" onclick="scrollToCards()">↓</div>
     </div>
     <div class="cards">
         <div class="card">
-            <h3 style="font-size:2rem; font-weight:900;">$35 FREE BONUS</h3>
+            <h3 style="font-size: 2rem; font-weight: 900;">$35 FREE BONUS</h3>
             <p>✓ Sign up under code ONEX100</p>
             <p>✓ New users Only</p>
-            <p>✓ Deposit $35, wager $35</p>
+            <p>✓ Deposit $35 wager $35</p>
             <p>✓ Contact us on Discord</p>
             <p>✓ Receive $35 for free</p>
-            <a href="https://RiskReal.openinapp.link/ONEX100" target="_blank">Claim Bonus</a>
+            <a href="http://stake.bet?c=ONEX100&offer=onex100" target="_blank">Claim Bonus</a>
         </div>
         <div class="card">
-            <h3 style="font-size:2rem; font-weight:900;">$200</h3>
-            <h3 style="font-size:1.5rem; font-weight:700; margin-top:5px;">WEEKLY LEADERBOARD</h3>
+            <h3 style="font-size: 2rem; font-weight: 900;">$200</h3>
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 5px;">WEEKLY LEADERBOARD</h3>
             <p>✓ Sign up under code ONEX100</p>
             <p>✓ Wager on Stake.com</p>
             <p>✓ Check the leaderboard ranking!</p>
             <a href="#" onclick="openModal('weekly')">View Leaderboard</a>
         </div>
         <div class="card popular">
-            <h3 style="font-size:2rem; font-weight:900;">$1000</h3>
-            <h3 style="font-size:1.5rem; font-weight:700; margin-top:5px;">MONTHLY LEADERBOARD</h3>
+            <h3 style="font-size: 2rem; font-weight: 900;">$1000</h3>
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 5px;">MONTHLY LEADERBOARD</h3>
             <p>✓ Sign up under code ONEX100</p>
             <p>✓ Wager on Stake.com</p>
             <p>✓ Check the leaderboard ranking!</p>
             <a href="#" onclick="openModal('monthly')">View Leaderboard</a>
         </div>
         <div class="card">
-            <h3 style="font-size:2rem; font-weight:900;">200% DEPOSIT BONUS</h3>
+            <h3 style="font-size: 2rem; font-weight: 900;">200% DEPOSIT BONUS</h3>
             <p>✓ Sign up under code ONEX100</p>
             <p>✓ Deposit $100 - $1000</p>
             <p>✓ Contact us on Discord</p>
-            <a href="https://RiskReal.openinapp.link/ONEX100" target="_blank">Claim Bonus</a>
+            <a href="http://stake.bet?c=ONEX100&offer=onex100" target="_blank">Claim Bonus</a>
         </div>
     </div>
     <div class="discord">
         <p>For support or to claim your bonus, join our <a href="https://discord.gg/onex100" target="_blank">Discord community</a>.</p>
     </div>
     <div class="footer">
-        <a href="#">Terms & Conditions</a>  
-        <a href="https://discord.gg/onex100" target="_blank">Contact</a>  
+        <a href="#">Terms & Conditions</a>  
+        <a href="https://discord.gg/onex100" target="_blank">Contact</a>  
         <a href="https://discord.gg/onex100" target="_blank">Discord</a>
+        <a href="#" onclick="promptForAdminAccess()">Admin Update</a>
         <p>&copy; 2025 ONEX100. All rights reserved.</p>
     </div>
     <div class="warning">
         Warning: Gambling involves risk. Please play responsibly. 18+ only. Seek help if needed.
     </div>
+
     <!-- Modal for Leaderboard -->
     <div id="leaderboardModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle">Weekly Leaderboard</h2>
+            <h2 id="modalTitle"></h2>
+            <div id="options"></div>
             <div class="timer" id="timer"></div>
-            <p class="leaderboard-warning" id="leaderboardWarning">
-                This leaderboard updates once every 24 hours. Prizes are distributed on Mondays. Updates will be posted on Discord.
-            </p>
+            <p class="leaderboard-warning" id="leaderboardWarning"></p>
+            <p class="leaderboard-warning" id="lastUpdated"></p>
             <table>
                 <thead>
                     <tr>
@@ -361,142 +443,276 @@
                     </tr>
                 </thead>
                 <tbody id="leaderboardTable">
-                    <!-- Data injected by JS -->
+                    <!-- Data will be inserted here by JS -->
                 </tbody>
             </table>
         </div>
     </div>
+
+    <!-- Admin Modal for Updating Data -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAdminModal()">&times;</span>
+            <h2>Update Leaderboard Data</h2>
+            <label for="currentWeeklyDataInput">Current Weekly Data (JSON):</label>
+            <textarea id="currentWeeklyDataInput"></textarea>
+            <label for="currentWeeklyEndTime">Current Weekly End Time (YYYY-MM-DDTHH:MM):</label>
+            <input type="datetime-local" id="currentWeeklyEndTime">
+            <label for="lastWeeklyDataInput">Last Weekly Data (JSON):</label>
+            <textarea id="lastWeeklyDataInput"></textarea>
+            <label for="lastWeeklyEndTime">Last Weekly End Time (YYYY-MM-DDTHH:MM):</label>
+            <input type="datetime-local" id="lastWeeklyEndTime">
+            <label for="currentMonthlyDataInput">Current Monthly Data (JSON):</label>
+            <textarea id="currentMonthlyDataInput"></textarea>
+            <label for="currentMonthlyEndTime">Current Monthly End Time (YYYY-MM-DDTHH:MM):</label>
+            <input type="datetime-local" id="currentMonthlyEndTime">
+            <label for="lastMonthlyDataInput">Last Monthly Data (JSON):</label>
+            <textarea id="lastMonthlyDataInput"></textarea>
+            <label for="lastMonthlyEndTime">Last Monthly End Time (YYYY-MM-DDTHH:MM):</label>
+            <input type="datetime-local" id="lastMonthlyEndTime">
+            <button id="saveData" onclick="saveData()">Save</button>
+            <button id="changePassword" onclick="setAdminPassword()">Change Password</button>
+        </div>
+    </div>
+
     <script>
-        // Dummy data arrays for leaderboard
-const weeklyData = [
-    { rank: 1, username: 'Parv***', wager: '$8,305.99', prize: '$100' },
-    { rank: 2, username: 'Ashiq***', wager: '$1,634.05', prize: '$40' },
-    { rank: 3, username: 'suba***', wager: '$1,499.29', prize: '$25' },
-    { rank: 4, username: 'JAAT***', wager: '$1,154.31', prize: '$20' },
-    { rank: 5, username: 'Sanj***', wager: '$991.45', prize: '$15' },
-    { rank: 6, username: 'Veno***', wager: '$750.90', prize: '$0' },
-    { rank: 7, username: 'Riya***', wager: '$470.47', prize: '$0' },
-    { rank: 8, username: 'mqal***', wager: '$362.82', prize: '$0' },
-    { rank: 9, username: 'Manj***', wager: '$153.43', prize: '$0' },
-    { rank: 10, username: 'Mohd***', wager: '$139.77', prize: '$0' },
-    { rank: 11, username: 'Jyot***', wager: '$125.59', prize: '$0' },
-    { rank: 12, username: 'sush***', wager: '$45.39', prize: '$0' },
-    { rank: 13, username: 'lil4***', wager: '$38.03', prize: '$0' },
-    { rank: 14, username: 'Roha***', wager: '$30.05', prize: '$0' },
-    { rank: 15, username: 'mayu***', wager: '$29.61', prize: '$0' },
-    { rank: 16, username: 'Brah***', wager: '$28.33', prize: '$0' },
-    { rank: 17, username: 'hima***', wager: '$25.60', prize: '$0' },
-    { rank: 18, username: 'Apul***', wager: '$22.48', prize: '$0' },
-    { rank: 19, username: 'Raj3***', wager: '$18.68', prize: '$0' },
-    { rank: 20, username: 'prak***', wager: '$11.05', prize: '$0' },
-    { rank: 21, username: 'hars***', wager: '$10.54', prize: '$0' },
-    { rank: 22, username: 'Baby***', wager: '$5.25', prize: '$0' },
-    { rank: 23, username: 'Anur***', wager: '$3.87', prize: '$0' },
-    { rank: 24, username: 'Gogg***', wager: '$3.43', prize: '$0' },
-    { rank: 25, username: 'Banu***', wager: '$2.82', prize: '$0' },
-    { rank: 26, username: 'Iamf***', wager: '$2.45', prize: '$0' },
-    { rank: 27, username: 'Anyt***', wager: '$2.20', prize: '$0' },
-    { rank: 28, username: 'Paul***', wager: '$1.83', prize: '$0' },
-    { rank: 29, username: 'Bbcp***', wager: '$1.47', prize: '$0' },
-    { rank: 30, username: 'MaxG***', wager: '$1.09', prize: '$0' }
-];
-
-
-
-
-
-        const monthlyData = [
-            { rank: 1, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 2, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 3, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 4, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 5, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 6, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 7, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 8, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 9, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 10, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 11, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 12, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 13, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 14, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 15, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 16, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 17, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 18, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 19, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 20, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 21, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 22, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 23, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 24, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 25, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 26, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 27, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 28, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 29, username: 'NOT STARTED', wager: '$0', prize: '$0' },
-            { rank: 30, username: 'NOT STARTED', wager: '$0', prize: '$0' }
+        // Load data from localStorage or use default dummy data
+        let currentWeeklyData = JSON.parse(localStorage.getItem('currentWeeklyData')) || [
+            { rank: 1, username: 'CurrentWeekly1', wager: '$12,500', prize: '$100' },
+            { rank: 2, username: 'CurrentWeekly2', wager: '$11,200', prize: '$80' },
+            { rank: 3, username: 'CurrentWeekly3', wager: '$10,800', prize: '$60' },
+            { rank: 4, username: 'CurrentWeekly4', wager: '$9,750', prize: '$50' },
+            { rank: 5, username: 'CurrentWeekly5', wager: '$8,900', prize: '$40' },
+            { rank: 6, username: 'CurrentWeekly6', wager: '$8,200', prize: '$30' },
+            { rank: 7, username: 'CurrentWeekly7', wager: '$7,600', prize: '$25' },
+            { rank: 8, username: 'CurrentWeekly8', wager: '$7,000', prize: '$20' },
+            { rank: 9, username: 'CurrentWeekly9', wager: '$6,500', prize: '$15' },
+            { rank: 10, username: 'CurrentWeekly10', wager: '$6,000', prize: '$10' },
+            { rank: 11, username: 'CurrentWeekly11', wager: '$5,800', prize: '$8' },
+            { rank: 12, username: 'CurrentWeekly12', wager: '$5,500', prize: '$7' },
+            { rank: 13, username: 'CurrentWeekly13', wager: '$5,200', prize: '$6' },
+            { rank: 14, username: 'CurrentWeekly14', wager: '$4,900', prize: '$5' },
+            { rank: 15, username: 'CurrentWeekly15', wager: '$4,700', prize: '$4' },
+            { rank: 16, username: 'CurrentWeekly16', wager: '$4,500', prize: '$3' },
+            { rank: 17, username: 'CurrentWeekly17', wager: '$4,200', prize: '$3' },
+            { rank: 18, username: 'CurrentWeekly18', wager: '$4,000', prize: '$2' },
+            { rank: 19, username: 'CurrentWeekly19', wager: '$3,800', prize: '$2' },
+            { rank: 20, username: 'CurrentWeekly20', wager: '$3,600', prize: '$2' },
+            { rank: 21, username: 'CurrentWeekly21', wager: '$3,400', prize: '$1' },
+            { rank: 22, username: 'CurrentWeekly22', wager: '$3,200', prize: '$1' },
+            { rank: 23, username: 'CurrentWeekly23', wager: '$3,000', prize: '$1' },
+            { rank: 24, username: 'CurrentWeekly24', wager: '$2,800', prize: '$1' },
+            { rank: 25, username: 'CurrentWeekly25', wager: '$2,600', prize: '$1' },
+            { rank: 26, username: 'CurrentWeekly26', wager: '$2,400', prize: '$1' },
+            { rank: 27, username: 'CurrentWeekly27', wager: '$2,200', prize: '$1' },
+            { rank: 28, username: 'CurrentWeekly28', wager: '$2,000', prize: '$1' },
+            { rank: 29, username: 'CurrentWeekly29', wager: '$1,800', prize: '$1' },
+            { rank: 30, username: 'CurrentWeekly30', wager: '$1,600', prize: '$1' }
         ];
 
-        // Timer end times: Set from now + 7 days or 30 days
-// Fixed end dates (change to your preferred schedule)
-const weeklyEndTime = new Date("2025-11-02T23:59:59"); // Ends Oct 26, 2025 at 11:59 PM
-//const monthlyEndTime = new Date("2025-10-31T23:59:59"); // Ends Oct 31, 2025 at 11:59 PM
+        let lastWeeklyData = JSON.parse(localStorage.getItem('lastWeeklyData')) || [
+            { rank: 1, username: 'LastWeekly1', wager: '$12,000', prize: '$100' },
+            { rank: 2, username: 'LastWeekly2', wager: '$11,000', prize: '$80' },
+            { rank: 3, username: 'LastWeekly3', wager: '$10,000', prize: '$60' },
+            { rank: 4, username: 'LastWeekly4', wager: '$9,000', prize: '$50' },
+            { rank: 5, username: 'LastWeekly5', wager: '$8,000', prize: '$40' },
+            { rank: 6, username: 'LastWeekly6', wager: '$7,000', prize: '$30' },
+            { rank: 7, username: 'LastWeekly7', wager: '$6,000', prize: '$25' },
+            { rank: 8, username: 'LastWeekly8', wager: '$5,000', prize: '$20' },
+            { rank: 9, username: 'LastWeekly9', wager: '$4,000', prize: '$15' },
+            { rank: 10, username: 'LastWeekly10', wager: '$3,000', prize: '$10' },
+            { rank: 11, username: 'LastWeekly11', wager: '$2,000', prize: '$8' },
+            { rank: 12, username: 'LastWeekly12', wager: '$1,000', prize: '$7' },
+            { rank: 13, username: 'LastWeekly13', wager: '$900', prize: '$6' },
+            { rank: 14, username: 'LastWeekly14', wager: '$800', prize: '$5' },
+            { rank: 15, username: 'LastWeekly15', wager: '$700', prize: '$4' },
+            { rank: 16, username: 'LastWeekly16', wager: '$600', prize: '$3' },
+            { rank: 17, username: 'LastWeekly17', wager: '$500', prize: '$3' },
+            { rank: 18, username: 'LastWeekly18', wager: '$400', prize: '$2' },
+            { rank: 19, username: 'LastWeekly19', wager: '$300', prize: '$2' },
+            { rank: 20, username: 'LastWeekly20', wager: '$200', prize: '$2' },
+            { rank: 21, username: 'LastWeekly21', wager: '$100', prize: '$1' },
+            { rank: 22, username: 'LastWeekly22', wager: '$90', prize: '$1' },
+            { rank: 23, username: 'LastWeekly23', wager: '$80', prize: '$1' },
+            { rank: 24, username: 'LastWeekly24', wager: '$70', prize: '$1' },
+            { rank: 25, username: 'LastWeekly25', wager: '$60', prize: '$1' },
+            { rank: 26, username: 'LastWeekly26', wager: '$50', prize: '$1' },
+            { rank: 27, username: 'LastWeekly27', wager: '$40', prize: '$1' },
+            { rank: 28, username: 'LastWeekly28', wager: '$30', prize: '$1' },
+            { rank: 29, username: 'LastWeekly29', wager: '$20', prize: '$1' },
+            { rank: 30, username: 'LastWeekly30', wager: '$10', prize: '$1' }
+        ];
 
+        let currentMonthlyData = JSON.parse(localStorage.getItem('currentMonthlyData')) || [
+            { rank: 1, username: 'CurrentMonthly1', wager: '$95,000', prize: '$300' },
+            { rank: 2, username: 'CurrentMonthly2', wager: '$88,500', prize: '$250' },
+            { rank: 3, username: 'CurrentMonthly3', wager: '$82,000', prize: '$200' },
+            { rank: 4, username: 'CurrentMonthly4', wager: '$76,200', prize: '$150' },
+            { rank: 5, username: 'CurrentMonthly5', wager: '$70,800', prize: '$120' },
+            { rank: 6, username: 'CurrentMonthly6', wager: '$65,500', prize: '$100' },
+            { rank: 7, username: 'CurrentMonthly7', wager: '$60,900', prize: '$80' },
+            { rank: 8, username: 'CurrentMonthly8', wager: '$56,700', prize: '$70' },
+            { rank: 9, username: 'CurrentMonthly9', wager: '$52,400', prize: '$60' },
+            { rank: 10, username: 'CurrentMonthly10', wager: '$48,300', prize: '$50' },
+            { rank: 11, username: 'CurrentMonthly11', wager: '$44,500', prize: '$40' },
+            { rank: 12, username: 'CurrentMonthly12', wager: '$41,000', prize: '$35' },
+            { rank: 13, username: 'CurrentMonthly13', wager: '$37,800', prize: '$30' },
+            { rank: 14, username: 'CurrentMonthly14', wager: '$35,000', prize: '$25' },
+            { rank: 15, username: 'CurrentMonthly15', wager: '$32,500', prize: '$20' },
+            { rank: 16, username: 'CurrentMonthly16', wager: '$30,200', prize: '$18' },
+            { rank: 17, username: 'CurrentMonthly17', wager: '$28,000', prize: '$16' },
+            { rank: 18, username: 'CurrentMonthly18', wager: '$26,000', prize: '$14' },
+            { rank: 19, username: 'CurrentMonthly19', wager: '$24,300', prize: '$12' },
+            { rank: 20, username: 'CurrentMonthly20', wager: '$22,800', prize: '$10' },
+            { rank: 21, username: 'CurrentMonthly21', wager: '$21,500', prize: '$8' },
+            { rank: 22, username: 'CurrentMonthly22', wager: '$20,400', prize: '$7' },
+            { rank: 23, username: 'CurrentMonthly23', wager: '$19,300', prize: '$6' },
+            { rank: 24, username: 'CurrentMonthly24', wager: '$18,200', prize: '$5' },
+            { rank: 25, username: 'CurrentMonthly25', wager: '$17,100', prize: '$4' },
+            { rank: 26, username: 'CurrentMonthly26', wager: '$16,000', prize: '$3' },
+            { rank: 27, username: 'CurrentMonthly27', wager: '$15,000', prize: '$3' },
+            { rank: 28, username: 'CurrentMonthly28', wager: '$14,200', prize: '$2' },
+            { rank: 29, username: 'CurrentMonthly29', wager: '$13,500', prize: '$2' },
+            { rank: 30, username: 'CurrentMonthly30', wager: '$12,800', prize: '$1' }
+        ];
+
+        let lastMonthlyData = JSON.parse(localStorage.getItem('lastMonthlyData')) || [
+            { rank: 1, username: 'LastMonthly1', wager: '$90,000', prize: '$300' },
+            { rank: 2, username: 'LastMonthly2', wager: '$85,000', prize: '$250' },
+            { rank: 3, username: 'LastMonthly3', wager: '$80,000', prize: '$200' },
+            { rank: 4, username: 'LastMonthly4', wager: '$75,000', prize: '$150' },
+            { rank: 5, username: 'LastMonthly5', wager: '$70,000', prize: '$120' },
+            { rank: 6, username: 'LastMonthly6', wager: '$65,000', prize: '$100' },
+            { rank: 7, username: 'LastMonthly7', wager: '$60,000', prize: '$80' },
+            { rank: 8, username: 'LastMonthly8', wager: '$55,000', prize: '$70' },
+            { rank: 9, username: 'LastMonthly9', wager: '$50,000', prize: '$60' },
+            { rank: 10, username: 'LastMonthly10', wager: '$45,000', prize: '$50' },
+            { rank: 11, username: 'LastMonthly11', wager: '$40,000', prize: '$40' },
+            { rank: 12, username: 'LastMonthly12', wager: '$35,000', prize: '$35' },
+            { rank: 13, username: 'LastMonthly13', wager: '$30,000', prize: '$30' },
+            { rank: 14, username: 'LastMonthly14', wager: '$25,000', prize: '$25' },
+            { rank: 15, username: 'LastMonthly15', wager: '$20,000', prize: '$20' },
+            { rank: 16, username: 'LastMonthly16', wager: '$15,000', prize: '$18' },
+            { rank: 17, username: 'LastMonthly17', wager: '$10,000', prize: '$16' },
+            { rank: 18, username: 'LastMonthly18', wager: '$9,000', prize: '$14' },
+            { rank: 19, username: 'LastMonthly19', wager: '$8,000', prize: '$12' },
+            { rank: 20, username: 'LastMonthly20', wager: '$7,000', prize: '$10' },
+            { rank: 21, username: 'LastMonthly21', wager: '$6,000', prize: '$8' },
+            { rank: 22, username: 'LastMonthly22', wager: '$5,000', prize: '$7' },
+            { rank: 23, username: 'LastMonthly23', wager: '$4,000', prize: '$6' },
+            { rank: 24, username: 'LastMonthly24', wager: '$3,000', prize: '$5' },
+            { rank: 25, username: 'LastMonthly25', wager: '$2,000', prize: '$4' },
+            { rank: 26, username: 'LastMonthly26', wager: '$1,000', prize: '$3' },
+            { rank: 27, username: 'LastMonthly27', wager: '$900', prize: '$3' },
+            { rank: 28, username: 'LastMonthly28', wager: '$800', prize: '$2' },
+            { rank: 29, username: 'LastMonthly29', wager: '$700', prize: '$2' },
+            { rank: 30, username: 'LastMonthly30', wager: '$600', prize: '$1' }
+        ];
+
+        // Leaderboards config
+        const leaderboards = {
+            currentWeekly: {
+                title: 'Current Week Leaderboard',
+                data: currentWeeklyData,
+                endTime: new Date(localStorage.getItem('currentWeeklyEndTime') || new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
+                warning: 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays. Updates will be posted on Discord.',
+                raceType: 'Weekly'
+            },
+            lastWeekly: {
+                title: 'Last Week Leaderboard',
+                data: lastWeeklyData,
+                endTime: new Date(localStorage.getItem('lastWeeklyEndTime') || new Date().getTime() - 7 * 24 * 60 * 60 * 1000),
+                warning: 'This leaderboard competition has ended. Prizes have been distributed. Updates posted on Discord.',
+                raceType: 'Weekly'
+            },
+            currentMonthly: {
+                title: 'Current Monthly Leaderboard',
+                data: currentMonthlyData,
+                endTime: new Date(localStorage.getItem('currentMonthlyEndTime') || new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0, 23, 59, 59)),
+                warning: 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends. Updates will be posted on Discord.',
+                raceType: 'Monthly'
+            },
+            lastMonthly: {
+                title: 'Last Monthly Leaderboard',
+                data: lastMonthlyData,
+                endTime: new Date(localStorage.getItem('lastMonthlyEndTime') || new Date(new Date().getFullYear(), new Date().getMonth(), 0, 23, 59, 59)),
+                warning: 'This leaderboard competition has ended. Prizes have been distributed. Updates posted on Discord.',
+                raceType: 'Monthly'
+            }
+        };
+
+        let lastUpdated = localStorage.getItem('lastUpdated') || new Date().toLocaleString();
 
         let intervalId = null;
 
-        function updateTimer(type) {
-            const endTime = type === 'weekly' ? weeklyEndTime : monthlyEndTime;
-            const now = new Date().getTime();
-            const distance = endTime.getTime() - now;
+        function updateTimer(endTime, raceType) {
+            let nowTime = new Date().getTime();
+            let distance = endTime.getTime() - nowTime;
 
-            const timer = document.getElementById('timer');
             if (distance < 0) {
-                timer.innerHTML = `${type === 'weekly' ? 'Weekly' : 'Monthly'} Race Ended!`;
+                document.getElementById('timer').innerHTML = `${raceType} Leaderboard Ended!`;
                 if (intervalId) clearInterval(intervalId);
                 return;
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            timer.innerHTML = `Time Left: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            document.getElementById('timer').innerHTML = `Time Left: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        function loadLeaderboard(subtype) {
+            const config = leaderboards[subtype];
+            document.getElementById('modalTitle').innerHTML = config.title;
+            document.getElementById('leaderboardWarning').innerHTML = config.warning;
+            document.getElementById('lastUpdated').innerHTML = `Last updated: ${lastUpdated}`;
+
+            const tableBody = document.getElementById('leaderboardTable');
+            tableBody.innerHTML = '';
+            config.data.forEach(user => {
+                const row = `<tr><td>${user.rank}</td><td>${user.username}</td><td>${user.wager}</td><td>${user.prize}</td></tr>`;
+                tableBody.innerHTML += row;
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('#options button').forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to the selected button
+            const btn = document.getElementById(subtype + 'Btn');
+            if (btn) btn.classList.add('active');
+
+            if (intervalId) clearInterval(intervalId);
+            updateTimer(config.endTime, config.raceType);
+            intervalId = setInterval(() => updateTimer(config.endTime, config.raceType), 1000);
         }
 
         function openModal(type) {
             const modal = document.getElementById('leaderboardModal');
-            const title = document.getElementById('modalTitle');
-            const warning = document.getElementById('leaderboardWarning');
-            title.innerHTML = `${type === 'weekly' ? 'Weekly' : 'Monthly'} Leaderboard`;
-            warning.innerHTML = type === 'weekly'
-                ? 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays. Updates will be posted on Discord.'
-                : 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends. Updates will be posted on Discord.';
-            const tableBody = document.getElementById('leaderboardTable');
-            tableBody.innerHTML = '';
-            const data = type === 'weekly' ? weeklyData : monthlyData;
-            data.forEach(user => {
-                const row = `<tr>
-                    <td>${user.rank}</td>
-                    <td>${user.username}</td>
-                    <td>${user.wager}</td>
-                    <td>${user.prize}</td>
-                </tr>`;
-                tableBody.innerHTML += row;
-            });
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+            modal.style.display = 'block';
 
-            if (intervalId) clearInterval(intervalId);
-            updateTimer(type);
-            intervalId = setInterval(() => updateTimer(type), 1000);
-            modal.style.display = "block";
+            if (type === 'weekly') {
+                optionsDiv.innerHTML = `
+                    <button id="currentWeeklyBtn" onclick="loadLeaderboard('currentWeekly')">Current Week Leaderboard</button>
+                    <button id="lastWeeklyBtn" onclick="loadLeaderboard('lastWeekly')">Last Week Leaderboard</button>
+                `;
+                loadLeaderboard('currentWeekly');
+            } else if (type === 'monthly') {
+                optionsDiv.innerHTML = `
+                    <button id="currentMonthlyBtn" onclick="loadLeaderboard('currentMonthly')">Current Monthly Leaderboard</button>
+                    <button id="lastMonthlyBtn" onclick="loadLeaderboard('lastMonthly')">Last Monthly Leaderboard</button>
+                `;
+                loadLeaderboard('currentMonthly');
+            }
         }
 
         function closeModal() {
             const modal = document.getElementById('leaderboardModal');
             if (intervalId) clearInterval(intervalId);
-            modal.style.display = "none";
+            modal.style.display = 'none';
         }
 
         function scrollToCards() {
@@ -506,7 +722,78 @@ const weeklyEndTime = new Date("2025-11-02T23:59:59"); // Ends Oct 26, 2025 at 1
         window.onclick = function(event) {
             const modal = document.getElementById('leaderboardModal');
             if (event.target == modal) closeModal();
+            const adminModal = document.getElementById('adminModal');
+            if (event.target == adminModal) closeAdminModal();
         };
+
+        // Admin functions
+        function promptForAdminAccess() {
+            const password = prompt('Enter admin password:');
+            const storedPassword = localStorage.getItem('adminPassword') || 'defaultpassword'; // Default password if not set
+            if (password === storedPassword) {
+                openAdminModal();
+            } else {
+                alert('Incorrect password');
+            }
+        }
+
+        function openAdminModal() {
+            const modal = document.getElementById('adminModal');
+            modal.style.display = 'block';
+            document.getElementById('currentWeeklyDataInput').value = JSON.stringify(leaderboards.currentWeekly.data, null, 2);
+            document.getElementById('currentWeeklyEndTime').value = leaderboards.currentWeekly.endTime.toISOString().slice(0,16);
+            document.getElementById('lastWeeklyDataInput').value = JSON.stringify(leaderboards.lastWeekly.data, null, 2);
+            document.getElementById('lastWeeklyEndTime').value = leaderboards.lastWeekly.endTime.toISOString().slice(0,16);
+            document.getElementById('currentMonthlyDataInput').value = JSON.stringify(leaderboards.currentMonthly.data, null, 2);
+            document.getElementById('currentMonthlyEndTime').value = leaderboards.currentMonthly.endTime.toISOString().slice(0,16);
+            document.getElementById('lastMonthlyDataInput').value = JSON.stringify(leaderboards.lastMonthly.data, null, 2);
+            document.getElementById('lastMonthlyEndTime').value = leaderboards.lastMonthly.endTime.toISOString().slice(0,16);
+        }
+
+        function closeAdminModal() {
+            const modal = document.getElementById('adminModal');
+            modal.style.display = 'none';
+        }
+
+        function saveData() {
+            try {
+                leaderboards.currentWeekly.data = JSON.parse(document.getElementById('currentWeeklyDataInput').value);
+                leaderboards.lastWeekly.data = JSON.parse(document.getElementById('lastWeeklyDataInput').value);
+                leaderboards.currentMonthly.data = JSON.parse(document.getElementById('currentMonthlyDataInput').value);
+                leaderboards.lastMonthly.data = JSON.parse(document.getElementById('lastMonthlyDataInput').value);
+                leaderboards.currentWeekly.endTime = new Date(document.getElementById('currentWeeklyEndTime').value);
+                leaderboards.lastWeekly.endTime = new Date(document.getElementById('lastWeeklyEndTime').value);
+                leaderboards.currentMonthly.endTime = new Date(document.getElementById('currentMonthlyEndTime').value);
+                leaderboards.lastMonthly.endTime = new Date(document.getElementById('lastMonthlyEndTime').value);
+                localStorage.setItem('currentWeeklyData', JSON.stringify(leaderboards.currentWeekly.data));
+                localStorage.setItem('lastWeeklyData', JSON.stringify(leaderboards.lastWeekly.data));
+                localStorage.setItem('currentMonthlyData', JSON.stringify(leaderboards.currentMonthly.data));
+                localStorage.setItem('lastMonthlyData', JSON.stringify(leaderboards.lastMonthly.data));
+                localStorage.setItem('currentWeeklyEndTime', leaderboards.currentWeekly.endTime.toISOString());
+                localStorage.setItem('lastWeeklyEndTime', leaderboards.lastWeekly.endTime.toISOString());
+                localStorage.setItem('currentMonthlyEndTime', leaderboards.currentMonthly.endTime.toISOString());
+                localStorage.setItem('lastMonthlyEndTime', leaderboards.lastMonthly.endTime.toISOString());
+                lastUpdated = new Date().toLocaleString();
+                localStorage.setItem('lastUpdated', lastUpdated);
+                alert('Data saved successfully!');
+                closeAdminModal();
+            } catch (e) {
+                alert('Invalid JSON or date format. Please check and try again.');
+            }
+        }
+
+        function setAdminPassword() {
+            const newPassword = prompt('Enter new admin password:');
+            if (newPassword) {
+                localStorage.setItem('adminPassword', newPassword);
+                alert('Password set successfully!');
+            }
+        }
+
+        // To set initial password, you can call setAdminPassword() in console or uncomment below
+        // if (!localStorage.getItem('adminPassword')) {
+        //     setAdminPassword();
+        // }
     </script>
 </body>
 </html>
