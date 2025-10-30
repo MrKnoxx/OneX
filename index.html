@@ -729,7 +729,7 @@
         // Admin functions
         function promptForAdminAccess() {
             const password = prompt('Enter admin password:');
-            const storedPassword = localStorage.getItem('adminPassword') || 'defaultpassword'; // Default password if not set
+            const storedPassword = localStorage.getItem('adminPassword') || 'ONE1000'; // Default password if not set
             if (password === storedPassword) {
                 openAdminModal();
             } else {
