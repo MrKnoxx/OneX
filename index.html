@@ -342,35 +342,36 @@ let currentMonthlyData = [
     const lastMonthlyEndTime = new Date("2025-10-02T23:59:59");   // Last month ended
 
     const leaderboards = {
-        currentWeekly: { 
-            title: 'Current Week Leaderboard', 
-            data: currentWeeklyData, 
-            endTime: currentWeeklyEndTime, 
-            raceType: 'Weekly', 
-            warning: 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays.' 
-        },
-        lastWeekly: { 
-            title: 'Last Week Leaderboard', 
-            data: lastWeeklyData, 
-            endTime: lastWeeklyEndTime, 
-            raceType: 'Weekly', 
-            warning: 'This leaderboard competition has ended.' 
-        },
-        currentMonthly: { 
-            title: 'Current Monthly Leaderboard', 
-            data: currentMonthlyData, 
-            endTime: currentMonthlyEndTime, 
-            raceType: 'Monthly', 
-            warning: 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends.' 
-        },
-        lastMonthly: { 
-            title: 'Last Monthly Leaderboard', 
-            data: lastMonthlyData, 
-            endTime: lastMonthlyEndTime, 
-            raceType: 'Monthly', 
-            warning: 'This leaderboard competition has ended.' 
-        }
-    };
+    currentWeekly: { 
+        title: 'Current Week Leaderboard', 
+        data: currentWeeklyData, 
+        endTime: currentWeeklyEndTime, 
+        raceType: 'Weekly', 
+        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays. ⚠️ Minimum wager required to claim prize: $20,000.' 
+    },
+    lastWeekly: { 
+        title: 'Last Week Leaderboard', 
+        data: lastWeeklyData, 
+        endTime: lastWeeklyEndTime, 
+        raceType: 'Weekly', 
+        warning: 'This leaderboard competition has ended. ⚠️ Minimum wager required was $20,000 to claim prizes.' 
+    },
+    currentMonthly: { 
+        title: 'Current Monthly Leaderboard', 
+        data: currentMonthlyData, 
+        endTime: currentMonthlyEndTime, 
+        raceType: 'Monthly', 
+        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends. ⚠️ Minimum wager required to claim prize: $100,000.' 
+    },
+    lastMonthly: { 
+        title: 'Last Monthly Leaderboard', 
+        data: lastMonthlyData, 
+        endTime: lastMonthlyEndTime, 
+        raceType: 'Monthly', 
+        warning: 'This leaderboard competition has ended. ⚠️ Minimum wager required was $100,000 to claim prizes.' 
+    }
+};
+
 
     let intervalId = null;
 
