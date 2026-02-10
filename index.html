@@ -151,11 +151,11 @@
   <script>
     // === Leaderboard Data ===
 let currentWeeklyData = [
-  { rank: 1,  username: 'Anura****',    wager: '$6,220.33', prize: '$150' },
-  { rank: 2,  username: 'Heena****',    wager: '$759.25',   prize: '$70'  },
-  { rank: 3,  username: 'Sahab****',    wager: '$730.03',   prize: '$40'  },
-  { rank: 4,  username: 'Paulx****',    wager: '$621.64',   prize: '$20'  },
-  { rank: 5,  username: 'Venom****',    wager: '$457.60',   prize: '$15'  },
+  { rank: 1,  username: 'Anura****',    wager: '$6,220.33', prize: '$250' },
+  { rank: 2,  username: 'Heena****',    wager: '$759.25',   prize: '$120'  },
+  { rank: 3,  username: 'Sahab****',    wager: '$730.03',   prize: '$70'  },
+  { rank: 4,  username: 'Paulx****',    wager: '$621.64',   prize: '$35'  },
+  { rank: 5,  username: 'Venom****',    wager: '$457.60',   prize: '$25'  },
 
   { rank: 6,  username: 'Ashiq****',    wager: '$183.12',   prize: '$0' },
   { rank: 7,  username: 'Brije****',    wager: '$178.69',   prize: '$0' },
@@ -237,15 +237,15 @@ let lastWeeklyData = [
 
 
 let currentMonthlyData = [
-  { rank: 1,  username: 'Jiya****',  wager: '$20,871.77', prize: '$800' },
-  { rank: 2,  username: 'Anur****',  wager: '$8,091.71',  prize: '$400' },
-  { rank: 3,  username: 'Sudi****',  wager: '$5,894.62',  prize: '$300' },
-  { rank: 4,  username: 'Paul****',  wager: '$3,747.98',  prize: '$200' },
-  { rank: 5,  username: 'Itzr****',  wager: '$3,641.05',  prize: '$120' },
+  { rank: 1,  username: 'Jiya****',  wager: '$20,871.77', prize: '$1200' },
+  { rank: 2,  username: 'Anur****',  wager: '$8,091.71',  prize: '$600' },
+  { rank: 3,  username: 'Sudi****',  wager: '$5,894.62',  prize: '$450' },
+  { rank: 4,  username: 'Paul****',  wager: '$3,747.98',  prize: '$300' },
+  { rank: 5,  username: 'Itzr****',  wager: '$3,641.05',  prize: '$180' },
 
-  { rank: 6,  username: 'Saha****',  wager: '$3,272.87',  prize: '$80'  },
-  { rank: 7,  username: 'Ashi****',  wager: '$2,254.76',  prize: '$60'  },
-  { rank: 8,  username: 'Pree****',  wager: '$1,511.07',  prize: '$40'  },
+  { rank: 6,  username: 'Saha****',  wager: '$3,272.87',  prize: '$120'  },
+  { rank: 7,  username: 'Ashi****',  wager: '$2,254.76',  prize: '$90'  },
+  { rank: 8,  username: 'Pree****',  wager: '$1,511.07',  prize: '$60'  },
   { rank: 9,  username: 'Heen****',  wager: '$1,218.03',  prize: '$0'   },
   { rank:10,  username: 'Ranj****',  wager: '$1,181.42',  prize: '$0'   },
 
@@ -329,28 +329,28 @@ let lastMonthlyData = [
         data: currentWeeklyData, 
         endTime: currentWeeklyEndTime, 
         raceType: 'Weekly', 
-        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays. ⚠️ Minimum wager required to claim prize: $20,000.' 
+        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays. ⚠️ Minimum wager required to claim prize: $30,000.' 
     },
     lastWeekly: { 
         title: 'Last Week Leaderboard', 
         data: lastWeeklyData, 
         endTime: lastWeeklyEndTime, 
         raceType: 'Weekly', 
-        warning: 'This leaderboard competition has ended. ⚠️ Minimum wager required was $20,000 to claim prizes.' 
+        warning: 'This leaderboard competition has ended. ⚠️ Minimum wager required was $30,000 to claim prizes.' 
     },
     currentMonthly: { 
         title: 'Current Monthly Leaderboard', 
         data: currentMonthlyData, 
         endTime: currentMonthlyEndTime, 
         raceType: 'Monthly', 
-        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends. ⚠️ Minimum wager required to claim prize: $100,000.' 
+        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends. ⚠️ Minimum wager required to claim prize: $125,000.' 
     },
     lastMonthly: { 
         title: 'Last Monthly Leaderboard', 
         data: lastMonthlyData, 
         endTime: lastMonthlyEndTime, 
         raceType: 'Monthly', 
-        warning: 'This leaderboard competition has ended. ⚠️ Minimum wager required was $100,000 to claim prizes.' 
+        warning: 'This leaderboard competition has ended. ⚠️ Minimum wager required was $125,000 to claim prizes.' 
     }
 };
 
