@@ -79,6 +79,7 @@
         <div class="premium-box">WELCOME TO ONEX100 COMMUNITY</div>
         <h1>THE BEST EXCLUSIVE REWARDS & BONUSES</h1>
         <p>Exclusive Offers: Choose from our premium bonus packages designed to maximize your gaming experience.</p>
+        <p class="notice">Note: There is no leaderboard currently running.</p>
         <div class="arrow" onclick="scrollToCards()">↓</div>
     </div>
 
@@ -92,15 +93,16 @@
             <p>✓ Receive $21 for free</p>
             <a href="https://ONEX100.openinapp.link/ONEX100" target="_blank">Claim Bonus</a>
         </div>
-        <div class="card">
-            <h3 style="font-size: 2rem; font-weight: 900;">$300</h3>
+        <div class="card" style="display: none;">
+            <h3 style="font-size: 2rem; font-weight: 900;">$500</h3>
             <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 5px;">WEEKLY LEADERBOARD</h3>
+            <p style="color: #00D1B2; font-weight: 700;">Now Available!</p>
             <p>✓ Sign up under code ONEX100</p>
             <p>✓ Wager on Stake.com</p>
             <p>✓ Check the leaderboard ranking!</p>
             <a href="javascript:void(0)" onclick="openModal('weekly')">View Leaderboard</a>
         </div>
-        <div class="card popular">
+        <div class="card popular" style="display: none;">
             <h3 style="font-size: 2rem; font-weight: 900;">$3000</h3>
             <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 5px;">MONTHLY LEADERBOARD</h3>
             <p>✓ Sign up under code ONEX100</p>
@@ -113,7 +115,7 @@
             <h3 style="font-size: 2rem; font-weight: 900;">REFER & EARN</h3>
             <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 5px;"></h3>
             <p>✓ Refer your friend</p>
-            <p>✓ Get 5$ bonus</p>
+            <p>✓ Get 500 rs bonus</p>
             <p>✓ Your friend gets $21 bonus</p>
             <p>✓ Send proof on Discord</p>
             <a href="javascript:void(0)" onclick="openReferTerms()">View Terms</a>
@@ -190,81 +192,87 @@
   <script>
     // === Leaderboard Data ===
 let currentWeeklyData = [
-  { rank: 1,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$100' },
-  { rank: 2,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$60'  },
-  { rank: 3,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$40'  },
-  { rank: 4,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$20'  },
-  { rank: 5,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$15'  },
+  { rank: 1,  username: 'Coming Soon', wager: '$0', prize: '$250' },
+  { rank: 2,  username: 'Coming Soon', wager: '$0', prize: '$120' },
+  { rank: 3,  username: 'Coming Soon', wager: '$0', prize: '$70'  },
+  { rank: 4,  username: 'Coming Soon', wager: '$0', prize: '$21'  },
+  { rank: 5,  username: 'Coming Soon', wager: '$0', prize: '$25'  },
 
-  { rank: 6,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$7' },
-  { rank: 7,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$7' },
-  { rank: 8,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$7' },
-  { rank: 9,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$7' },
-  { rank:10,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$7' },
+  { rank: 6,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank: 7,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank: 8,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank: 9,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:10,  username: 'Coming Soon', wager: '$0', prize: '$0' },
 
-  { rank:11,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:12,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:13,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:14,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:15,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
+  { rank:11,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:12,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:13,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:14,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:15,  username: 'Coming Soon', wager: '$0', prize: '$0' },
 
-  { rank:16,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:17,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:18,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:19,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
-  { rank:20,  username: 'Coming Soon', wager: 'Coming Soon', prize: '$3' },
+  { rank:16,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:17,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:18,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:19,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:20,  username: 'Coming Soon', wager: '$0', prize: '$0' },
 
-  { rank:21,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:22,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:23,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:24,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:25,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
+  { rank:21,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:22,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:23,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:24,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:25,  username: 'Coming Soon', wager: '$0', prize: '$0' },
 
-  { rank:26,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:27,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:28,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:29,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' },
-  { rank:30,  username: 'Coming Soon', wager: 'Coming Soon', prize: '-' }
+  { rank:26,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:27,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:28,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:29,  username: 'Coming Soon', wager: '$0', prize: '$0' },
+  { rank:30,  username: 'Coming Soon', wager: '$0', prize: '$0' }
 ];
+
+
+
+
 
 
 let lastWeeklyData = [
-  { rank: 1,  username: 'Saha****', wager: '$10,206.10', prize: '$100' },
-  { rank: 2,  username: 'Anur****', wager: '$5,714.99', prize: '$60' },
-  { rank: 3,  username: 'Veno****', wager: '$5,014.46', prize: '$40' },
-  { rank: 4,  username: 'Baba****', wager: '$4,181.16', prize: '$20' },
-  { rank: 5,  username: 'bhai****', wager: '$3,017.79', prize: '$15' },
+  { rank: 1,  username: 'Saha*****',  wager: '$13,967.07', prize: '$250' },
+  { rank: 2,  username: 'Anur*****',  wager: '$7,272.38',  prize: '$120'  },
+  { rank: 3,  username: 'Veno*****',  wager: '$1,992.99',  prize: '$70'  },
+  { rank: 4,  username: 'Paul*****',  wager: '$1,700.23',  prize: '$35'  },
+  { rank: 5,  username: 'Itzr*****',  wager: '$1,373.31',  prize: '$25'  },
 
-  { rank: 6,  username: 'Noth****', wager: '$1,637.51', prize: '$7' },
-  { rank: 7,  username: 'hars****', wager: '$1,332.94', prize: '$7' },
-  { rank: 8,  username: 'Paul****', wager: '$1,292.82', prize: '$7' },
-  { rank: 9,  username: 'Ajay****', wager: '$1,138.17', prize: '$7' },
-  { rank:10,  username: 'Tayy****', wager: '$1,049.51', prize: '$7' },
+  { rank: 6,  username: 'sruj*****',  wager: '$1,218.66',  prize: '$0'   },
+  { rank: 7,  username: 'Ansh*****',  wager: '$868.81',    prize: '$0'   },
+  { rank: 8,  username: 'Heen*****',  wager: '$847.47',    prize: '$0'   },
+  { rank: 9,  username: 'Ashi*****',  wager: '$767.65',    prize: '$0'   },
+  { rank:10,  username: 'Roha*****',  wager: '$640.29',    prize: '$0'   },
 
-  { rank:11,  username: 'KING****', wager: '$848.60', prize: '$3' },
-  { rank:12,  username: '555b****', wager: '$527.40', prize: '$3' },
-  { rank:13,  username: 'Moni****', wager: '$515.63', prize: '$3' },
-  { rank:14,  username: 'OneE****', wager: '$410.69', prize: '$3' },
-  { rank:15,  username: 'Anyt****', wager: '$302.16', prize: '$3' },
+  { rank:11,  username: 'Moni*****',  wager: '$514.73',    prize: '$0'   },
+  { rank:12,  username: 'Nest*****',  wager: '$497.67',    prize: '$0'   },
+  { rank:13,  username: 'Noth*****',  wager: '$429.70',    prize: '$0'   },
+  { rank:14,  username: 'NBST*****',  wager: '$359.28',    prize: '$0'   },
+  { rank:15,  username: 'Anta*****',  wager: '$249.20',    prize: '$0'   },
 
-  { rank:16,  username: 'Dhei****', wager: '$291.67', prize: '$3' },
-  { rank:17,  username: 'Dush****', wager: '$279.63', prize: '$3' },
-  { rank:18,  username: 'Ashi****', wager: '$269.12', prize: '$3' },
-  { rank:19,  username: 'Heen****', wager: '$253.61', prize: '$3' },
-  { rank:20,  username: 'gowt****', wager: '$242.80', prize: '$3' },
+  { rank:16,  username: 'hars*****',  wager: '$222.69',    prize: '$0'   },
+  { rank:17,  username: 'Sach*****',  wager: '$216.17',    prize: '$0'   },
+  { rank:18,  username: 'Ris5*****',  wager: '$189.13',    prize: '$0'   },
+  { rank:19,  username: 'Anyt*****',  wager: '$188.94',    prize: '$0'   },
+  { rank:20,  username: 'Brij*****',  wager: '$178.69',    prize: '$0'   },
 
-  { rank:21,  username: 'Teja****', wager: '$235.13', prize: '-' },
-  { rank:22,  username: 'Rajk****', wager: '$231.51', prize: '-' },
-  { rank:23,  username: 'TSMe****', wager: '$229.91', prize: '-' },
-  { rank:24,  username: 'Ris5****', wager: '$209.31', prize: '-' },
-  { rank:25,  username: 'Kshs****', wager: '$208.42', prize: '-' },
+  { rank:21,  username: 'Ipho*****',  wager: '$177.73',    prize: '$0'   },
+  { rank:22,  username: 'Bbcp*****',  wager: '$173.60',    prize: '$0'   },
+  { rank:23,  username: 'ranj*****',  wager: '$141.07',    prize: '$0'   },
+  { rank:24,  username: '555b*****',  wager: '$137.43',    prize: '$0'   },
+  { rank:25,  username: 'Joym*****',  wager: '$128.63',    prize: '$0'   },
 
-  { rank:26,  username: 'Jaih****', wager: '$206.85', prize: '-' },
-  { rank:27,  username: 'Brij****', wager: '$193.70', prize: '-' },
-  { rank:28,  username: 'Sooo****', wager: '$185.06', prize: '-' },
-  { rank:29,  username: 'suba****', wager: '$179.49', prize: '-' },
-  { rank:30,  username: 'Saty****', wager: '$149.35', prize: '-' }
+  { rank:26,  username: 'suba*****',  wager: '$124.07',    prize: '$0'   },
+  { rank:27,  username: 'Riya*****',  wager: '$121.62',    prize: '$0'   },
+  { rank:28,  username: 'Dush*****',  wager: '$114.96',    prize: '$0'   },
+  { rank:29,  username: 'Shad*****',  wager: '$106.09',    prize: '$0'   },
+  { rank:30,  username: 'Send*****',  wager: '$100.66',    prize: '$0'   }
 ];
+
+
 
 
 
@@ -272,88 +280,90 @@ let lastWeeklyData = [
 
 
 let currentMonthlyData = [
-  { rank: 1,  username: 'Saha****', wager: '$10,206.10', prize: '$1200' },
-  { rank: 2,  username: 'Anur****', wager: '$5,714.99', prize: '$600' },
-  { rank: 3,  username: 'Veno****', wager: '$5,471.72', prize: '$450' },
-  { rank: 4,  username: 'Baba****', wager: '$4,364.28', prize: '$300' },
-  { rank: 5,  username: 'bhai****', wager: '$3,019.57', prize: '$180' },
+  { rank: 1,  username: 'Jiya****',  wager: '$20,871.77', prize: '$1200' },
+  { rank: 2,  username: 'Saha****',  wager: '$16,509.91', prize: '$600'  },
+  { rank: 3,  username: 'Anur****',  wager: '$9,143.76',  prize: '$450'  },
+  { rank: 4,  username: 'Sudi****',  wager: '$5,894.62',  prize: '$300'  },
+  { rank: 5,  username: 'Itzr****',  wager: '$5,014.35',  prize: '$180'  },
 
-  { rank: 6,  username: 'hars****', wager: '$1,833.91', prize: '$120' },
-  { rank: 7,  username: 'Noth****', wager: '$1,754.90', prize: '$90' },
-  { rank: 8,  username: 'Paul****', wager: '$1,721.49', prize: '$60' },
-  { rank: 9,  username: 'Ajay****', wager: '$1,138.17', prize: '$0' },
-  { rank:10,  username: 'Tayy****', wager: '$1,095.46', prize: '$0' },
+  { rank: 6,  username: 'Paul****',  wager: '$4,826.58',  prize: '$120'  },
+  { rank: 7,  username: 'Ashi****',  wager: '$2,839.28',  prize: '$90'   },
+  { rank: 8,  username: 'Veno****',  wager: '$2,665.04',  prize: '$60'   },
+  { rank: 9,  username: 'sruj****',  wager: '$2,255.29',  prize: '$0'    },
+  { rank:10,  username: 'Pree****',  wager: '$1,524.80',  prize: '$0'    },
 
-  { rank:11,  username: 'KING****', wager: '$848.60', prize: '$0' },
-  { rank:12,  username: '555b****', wager: '$562.20', prize: '$0' },
-  { rank:13,  username: 'Moni****', wager: '$515.63', prize: '$0' },
-  { rank:14,  username: 'OneE****', wager: '$410.69', prize: '$0' },
-  { rank:15,  username: 'Anyt****', wager: '$302.16', prize: '$0' },
+  { rank:11,  username: 'Heen****',  wager: '$1,306.25',  prize: '$0'    },
+  { rank:12,  username: 'Ranj****',  wager: '$1,181.42',  prize: '$0'    },
+  { rank:13,  username: 'Rosa****',  wager: '$1,165.51',  prize: '$0'    },
+  { rank:14,  username: 'hars****',  wager: '$1,129.75',  prize: '$0'    },
+  { rank:15,  username: 'Noth****',  wager: '$1,038.76',  prize: '$0'    },
 
-  { rank:16,  username: 'Dhei****', wager: '$300.36', prize: '$0' },
-  { rank:17,  username: 'Ris5****', wager: '$286.17', prize: '$0' },
-  { rank:18,  username: 'Dush****', wager: '$280.14', prize: '$0' },
-  { rank:19,  username: 'Ashi****', wager: '$270.44', prize: '$0' },
-  { rank:20,  username: 'Heen****', wager: '$261.89', prize: '$0' },
+  { rank:16,  username: 'Anuj****',  wager: '$904.17',    prize: '$0'    },
+  { rank:17,  username: 'Ansh****',  wager: '$868.81',    prize: '$0'    },
+  { rank:18,  username: '555b****',  wager: '$750.29',    prize: '$0'    },
+  { rank:19,  username: 'Roha****',  wager: '$676.42',    prize: '$0'    },
+  { rank:20,  username: 'Jyot****',  wager: '$642.06',    prize: '$0'    },
 
-  { rank:21,  username: 'gowt****', wager: '$242.80', prize: '$0' },
-  { rank:22,  username: 'TSMe****', wager: '$236.67', prize: '$0' },
-  { rank:23,  username: 'Teja****', wager: '$235.13', prize: '$0' },
-  { rank:24,  username: 'Rajk****', wager: '$231.51', prize: '$0' },
-  { rank:25,  username: 'Jaih****', wager: '$217.83', prize: '$0' },
+  { rank:21,  username: 'Riya****',  wager: '$637.37',    prize: '$0'    },
+  { rank:22,  username: 'Moni****',  wager: '$623.53',    prize: '$0'    },
+  { rank:23,  username: 'Joym****',  wager: '$606.38',    prize: '$0'    },
+  { rank:24,  username: 'Brij****',  wager: '$606.28',    prize: '$0'    },
+  { rank:25,  username: 'Anyt****',  wager: '$599.14',    prize: '$0'    },
 
-  { rank:26,  username: 'Bobb****', wager: '$214.61', prize: '$0' },
-  { rank:27,  username: 'Anta****', wager: '$210.11', prize: '$0' },
-  { rank:28,  username: 'Kshs****', wager: '$208.42', prize: '$0' },
-  { rank:29,  username: 'Brij****', wager: '$193.93', prize: '$0' },
-  { rank:30,  username: 'Sooo****', wager: '$185.06', prize: '$0' }
+  { rank:26,  username: 'Apul****',  wager: '$569.33',    prize: '$0'    },
+  { rank:27,  username: 'Nest****',  wager: '$531.96',    prize: '$0'    },
+  { rank:28,  username: 'Ramk****',  wager: '$530.50',    prize: '$0'    },
+  { rank:29,  username: 'suba****',  wager: '$419.36',    prize: '$0'    },
+  { rank:30,  username: 'NBST****',  wager: '$412.63',    prize: '$0'    }
 ];
+
 
 
 
 
 
 let lastMonthlyData = [
-  { rank: 1,  username: 'Sahab*****',    wager: '$54,508.39', prize: '$800' },
-  { rank: 2,  username: 'Veno*****',     wager: '$28,639.68', prize: '$400' },
-  { rank: 3,  username: 'Jiyag*****',    wager: '$21,172.13', prize: '$300' },
-  { rank: 4,  username: 'Anura*****',    wager: '$12,379.61', prize: '$150' },
-  { rank: 5,  username: 'Paulx*****',    wager: '$6,827.84',  prize: '$100' },
+  { rank: 1,  username: 'Jiya*****', wager: '$75,401.41', prize: '$800' },
+  { rank: 2,  username: 'Ashi*****', wager: '$30,858.04', prize: '$400' },
+  { rank: 3,  username: 'Veno*****', wager: '$21,625.94', prize: '$300' },
+  { rank: 4,  username: 'Anur*****', wager: '$17,181.62', prize: '$150' },
+  { rank: 5,  username: 'Itzr*****', wager: '$11,591.04', prize: '$100' },
 
-  { rank: 6,  username: 'Sudip*****',    wager: '$5,894.62',  prize: '$80'  },
-  { rank: 7,  username: 'Itzra*****',    wager: '$5,079.34',  prize: '$60'  },
-  { rank: 8,  username: 'harsh*****',    wager: '$4,759.09',  prize: '$40'  },
-  { rank: 9,  username: 'Ashi*****',     wager: '$4,741.94',  prize: '$30'  },
-  { rank:10,  username: 'Monix*****',    wager: '$3,932.93',  prize: '$20'  },
+  { rank: 6,  username: 'bhai*****', wager: '$10,565.75', prize: '$80'  },
+  { rank: 7,  username: 'Joym*****', wager: '$9,154.92',  prize: '$60'  },
+  { rank: 8,  username: 'Hars*****', wager: '$8,338.82',  prize: '$40'  },
+  { rank: 9,  username: 'Moni*****', wager: '$5,249.76',  prize: '$30'  },
+  { rank:10,  username: 'Bini*****', wager: '$5,022.92',  prize: '$20'  },
 
-  { rank:11,  username: 'zafer*****',    wager: '$3,787.04',  prize: '$0' },
-  { rank:12,  username: 'Nothi*****',    wager: '$3,216.44',  prize: '$0' },
-  { rank:13,  username: 'Babaco*****',   wager: '$3,046.89',  prize: '$0' },
-  { rank:14,  username: 'ALEN2*****',    wager: '$2,455.18',  prize: '$0' },
-  { rank:15,  username: 'sruja*****',    wager: '$2,255.30',  prize: '$0' },
+  { rank:11,  username: 'Limi*****', wager: '$4,853.73',  prize: '$0'   },
+  { rank:12,  username: 'Same*****', wager: '$4,165.27',  prize: '$0'   },
+  { rank:13,  username: 'Riya*****', wager: '$3,234.78',  prize: '$0'   },
+  { rank:14,  username: 'Pasw*****', wager: '$3,039.70',  prize: '$0'   },
+  { rank:15,  username: 'Pree*****', wager: '$2,990.91',  prize: '$0'   },
 
-  { rank:16,  username: 'bhaim*****',    wager: '$2,044.37',  prize: '$0' },
-  { rank:17,  username: 'Anuj1*****',    wager: '$1,813.46',  prize: '$0' },
-  { rank:18,  username: 'Heena*****',    wager: '$1,659.92',  prize: '$0' },
-  { rank:19,  username: 'Preet*****',    wager: '$1,565.42',  prize: '$0' },
-  { rank:20,  username: 'Rohan*****',    wager: '$1,458.85',  prize: '$0' },
+  { rank:16,  username: 'lil4*****', wager: '$2,872.64',  prize: '$0'   },
+  { rank:17,  username: 'Kshs*****', wager: '$2,655.77',  prize: '$0'   },
+  { rank:18,  username: 'Abma*****', wager: '$2,618.86',  prize: '$0'   },
+  { rank:19,  username: 'NBST*****', wager: '$2,496.16',  prize: '$0'   },
+  { rank:20,  username: 'Noth*****', wager: '$2,367.88',  prize: '$0'   },
 
-  { rank:21,  username: '555bha*****',   wager: '$1,443.35',  prize: '$0' },
-  { rank:22,  username: 'Nested*****',   wager: '$1,321.56',  prize: '$0' },
-  { rank:23,  username: 'Ranjha*****',   wager: '$1,181.42',  prize: '$0' },
-  { rank:24,  username: 'Rosana*****',   wager: '$1,165.51',  prize: '$0' },
-  { rank:25,  username: 'Shama*****',    wager: '$1,149.99',  prize: '$0' },
+  { rank:21,  username: 'Paul*****', wager: '$2,349.57',  prize: '$0'   },
+  { rank:22,  username: 'Send*****', wager: '$2,255.70',  prize: '$0'   },
+  { rank:23,  username: 'Parv*****', wager: '$2,164.28',  prize: '$0'   },
+  { rank:24,  username: 'Howm*****', wager: '$1,982.24',  prize: '$0'   },
+  { rank:25,  username: 'Anuj*****', wager: '$1,863.84',  prize: '$0'   },
 
-  { rank:26,  username: 'Antare*****',   wager: '$957.34',    prize: '$0' },
-  { rank:27,  username: 'Furkan*****',   wager: '$917.38',    prize: '$0' },
-  { rank:28,  username: 'Anshj*****',    wager: '$868.86',    prize: '$0' },
-  { rank:29,  username: 'NBSTT*****',    wager: '$842.59',    prize: '$0' },
-  { rank:30,  username: 'Apulk*****',    wager: '$789.66',    prize: '$0' }
+  { rank:26,  username: 'Ravi*****', wager: '$1,856.27',  prize: '$0'   },
+  { rank:27,  username: 'xsku*****', wager: '$1,676.87',  prize: '$0'   },
+  { rank:28,  username: '555b*****', wager: '$1,587.53',  prize: '$0'   },
+  { rank:29,  username: 'Jyot*****', wager: '$1,565.15',  prize: '$0'   },
+  { rank:30,  username: 'Rosa*****', wager: '$1,412.21',  prize: '$0'   }
 ];
+
     // === Manual End Times (Yahan aap date/time change kar sakte hain) ===
-    const currentWeeklyEndTime = new Date("2026-03-15T23:59:59"); // Current week ends
+    const currentWeeklyEndTime = new Date("2026-02-22T23:59:59"); // Current week ends
     const lastWeeklyEndTime = new Date("2025-10-26T23:59:59");    // Last week ended
-    const currentMonthlyEndTime = new Date("2026-03-31T23:59:59"); // Current month ends
+    const currentMonthlyEndTime = new Date("2026-02-28T23:59:59"); // Current month ends
     const lastMonthlyEndTime = new Date("2025-10-02T23:59:59");   // Last month ended
 
     const leaderboards = {
@@ -362,7 +372,7 @@ let lastMonthlyData = [
         data: currentWeeklyData, 
         endTime: currentWeeklyEndTime, 
         raceType: 'Weekly', 
-        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays' 
+        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed on Mondays. ⚠️ Minimum wager required to claim prize: $30,000.' 
     },
     lastWeekly: { 
         title: 'Last Week Leaderboard', 
@@ -376,7 +386,7 @@ let lastMonthlyData = [
         data: currentMonthlyData, 
         endTime: currentMonthlyEndTime, 
         raceType: 'Monthly', 
-        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends. ⚠️ Minimum wager required to claim prize: $150,000.' 
+        warning: 'This leaderboard updates once every 24 hours. Prizes are distributed within 48 hours after the month ends. ⚠️ Minimum wager required to claim prize: $125,000.' 
     },
     lastMonthly: { 
         title: 'Last Monthly Leaderboard', 
@@ -476,13 +486,13 @@ let lastMonthlyData = [
                 <div style="position:absolute; right:12px; top:8px;">
                     <span onclick="closeModal()" style="display:inline-block; background:#00D1B2; color:#052027; width:32px; height:32px; line-height:32px; text-align:center; border-radius:6px; cursor:pointer; font-weight:900; font-size:18px;">&times;</span>
                 </div>
-                <h3 style="color: #00D1B2; font-size: 1.3rem; margin-bottom: 15px;">How to Earn 5$ per Referral:</h3>
+                <h3 style="color: #00D1B2; font-size: 1.3rem; margin-bottom: 15px;">How to Earn 500 rs per Referral:</h3>
                 
                 <p style="margin-bottom: 15px;"><strong>📌 Step 1:</strong> Refer your friend to ONEX100</p>
                 
                 <p style="margin-bottom: 15px;"><strong>💰 Step 2:</strong> When your friend deposits $21, they receive a bonus</p>
                 
-                <p style="margin-bottom: 15px;"><strong>✅ Step 3:</strong> You get 5$ as a referral reward</p>
+                <p style="margin-bottom: 15px;"><strong>✅ Step 3:</strong> You get 500 rs as a referral reward</p>
                 
                 <p style="margin-bottom: 20px; padding: 15px; background: #071524; border-left: 4px solid #00D1B2;"><strong>⚠️ Important:</strong> Send proof of the referral (screenshot showing the deposit or deposit confirmation) on Discord to claim your 500 rs reward.</p>
                 
